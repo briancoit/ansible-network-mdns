@@ -16,6 +16,7 @@
 - name: mdns port opened in firewall zones
   firewalld: permanent=True service=mdns state=enabled zone={{ item }}
   with_items: network_mdns_zones
+  when: 'mdns_configure_firewall'
 
 - name: avahi daemon is enabled
   service: name=avahi-daemon enabled=yes state=started
