@@ -1,5 +1,5 @@
 ---
-
+mdns_configure_firewall: false
 network_mdns_zones:
   - home
   - internal
